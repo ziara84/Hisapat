@@ -18,9 +18,7 @@ padding: 10px 10px 0 8px !important;
                 <a href="<?= base_url() ?>admin/invoice/manage_invoice" class="short_cut  btn btn-info">
                     <i class="fa fa-bell" aria-hidden="true">
                     </i></a>
-                    
-                    
-                <h4> <?= lang('create_invoice')?>  </h4>
+                <h4> <?= lang('create_invoice')?> </h4>
             </div>
         </div>
 
