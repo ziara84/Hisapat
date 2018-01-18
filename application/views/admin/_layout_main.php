@@ -57,7 +57,7 @@ $this->session->unset_userdata('opened');
     }
 
 </script>
-<body onLoad="startTime()" class="<?php if (!empty($opened)) {
+<body onload="startTime()" class="<?php if (!empty($opened)) {
     echo 'offsidebar-open';
 } ?> <?= config_item('aside-float') . ' ' . config_item('aside-collapsed') . ' ' . config_item('layout-boxed') . ' ' . config_item('layout-fixed') ?>">
 <div class="wrapper">
@@ -164,7 +164,7 @@ $this->session->unset_userdata('opened');
         <div class="pull-right hidden-xs">
             <?= '<b>' . lang('version') . '</b> ' . config_item('version') ?>
         </div>
-       <strong>&copy; <a href="https://fekrasoftec.com">Fekra Softowers</a>.</strong>
+        <strong>&copy; <a href="<?= config_item('copyright_url') ?>"> <?= config_item('copyright_name') ?></a>.</strong>
         All rights reserved.
     </footer>
 </div>

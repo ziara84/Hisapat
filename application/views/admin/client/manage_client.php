@@ -403,7 +403,7 @@ $deleted = can_action('4', 'deleted');
                               ?>" method="post" class="form-horizontal  ">
                             <div class="panel-body">
                                 <label class="control-label col-sm-3"></label
-                                ><div class="col-sm-6">
+                                <div class="col-sm-6">
                                     <div class="nav-tabs-custom">
                                         <!-- Tabs within a box -->
                                         <ul class="nav nav-tabs">
@@ -469,7 +469,6 @@ $deleted = can_action('4', 'deleted');
                                                         ?>" name="vat">
                                                     </div>
                                                 </div>
-                                                <input type="hidden" name="vat" value="0"  />
                                                 <div class="form-group">
                                                     <label
                                                             class="col-sm-3 control-label"><?= lang('customer_group') ?></label>

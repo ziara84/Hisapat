@@ -16,7 +16,7 @@
     var defaults = {
 
 	titleRangeSeparator: ' \u2014 ', // emphasized dash
-	monthYearFormat: 'MMMM YYYY', // required for en. other languages rely on datepicker computable option
+	monthYearFormat: 'DDDD MMMM YYYY', // required for en. other languages rely on datepicker computable option
 
 	defaultTimedEventDuration: '02:00:00',
 	defaultAllDayEventDuration: { days: 1 },
@@ -99,7 +99,7 @@
 
 
 var englishDefaults = {
-	dayPopoverFormat: 'dddd, MMMM D'
+	dayPopoverFormat: 'dd, MM D'
 };
 
 

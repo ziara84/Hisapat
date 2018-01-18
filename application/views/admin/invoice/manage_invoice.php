@@ -1,5 +1,5 @@
 <!-- start modal-->
-<div id="myModal" class="modal fade" role="dialog">
+<div id="Add_clint" class="modal fade" role="dialog">
     <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
@@ -731,12 +731,11 @@ if (!empty($invoice_info)) {
                                                  id="start_recurring"><?= lang('recurring') ?></div>
 
                                         </div>
-                                        </div>
                                         <div id="recurring" class="hide">
                                             <div class="form-group">
                                                 <label
                                                         class="col-lg-3 control-label"><?= lang('recur_frequency') ?> </label>
-                                                <div class="col-lg-7">
+                                                <div class="col-lg-4">
                                                     <select name="recuring_frequency" id="recuring_frequency"
                                                             class="form-control">
                                                         <option value="none"><?= lang('none') ?></option>
@@ -757,7 +756,6 @@ if (!empty($invoice_info)) {
                                                     </select>
                                                 </div>
                                             </div>
-                                          
                                             <div class="form-group">
                                                 <label
                                                         class="col-lg-3 control-label"><?= lang('start_date') ?></label>
@@ -844,7 +842,7 @@ if (!empty($invoice_info)) {
                                                 <!-- button open modal-->
                                                 <div class="col-lg-2">
                                                
-                                                    <button type="button" data-toggle="modal" data-target="#myModal"
+                                                    <button type="button" data-toggle="modal" data-target="#Add_clint"
                                                             class="btn btn-success">Add Client
                                                     </button>
                                                
@@ -1399,8 +1397,6 @@ if (!empty($invoice_info)) {
 							 label.formobile{display:inline-block; width:100%; text-align:left;}
 							 thead{display:none !important;}
 							 div..modal-dialog{margin-top:800px !important;}
-							 div#start_recurring{margin-top:10px;}
-							 div.f_client_id button{margin-top:10px;}
 							}
 
                             </style>
@@ -1708,11 +1704,11 @@ if (!empty($invoice_info)) {
                                                 </td>
                                                 <td class="discount_percent"></td>
                                             </tr>
-                                            <tr style="display:none;">
+                                            <tr>
                                                 <td>
                                                     <div class="row">
-                                                        <div class="col-md-7">
-                                                            <span class="bold"><?php echo lang('adjustment'); ?></span>
+                                                        <div class="col-md-7 ">
+                                                            <span class="bold hidden"><?php echo lang('adjustment'); ?></span>
                                                         </div>
                                                         <div class="col-md-5">
                                                             <input type="text" data-parsley-type="number"

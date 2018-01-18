@@ -60,9 +60,9 @@ $user_info = $this->db->where('user_id', $user_id)->get('tbl_users')->row();
             <!-- START Right Navbar-->
             <ul class="nav navbar-nav navbar-right">
                 <?php if (config_item('enable_languages') == 'TRUE') { ?>
-                    <li class="dropdown">
+                    <li class="dropdown ">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-flag"></i> <?= lang('languages') ?>
+                            <i class="fa fa-flag"></i> <span class="hidden-xs"><?= lang('languages') ?></span>
                         </a>
                         <ul class="dropdown-menu animated zoomIn">
                             <?php

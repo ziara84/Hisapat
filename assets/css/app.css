@@ -3103,7 +3103,6 @@ h3 > .breadcrumb.pull-right,
     display: block;
     overflow: hidden;
     border: 0 !important;
-    width: 84% !important;
 }
 
 .user-block {
@@ -7368,4 +7367,74 @@ Component: chart-flot.less
 .unread {
     background: #f0f4fd;
     border-bottom: 1px solid #f7f9fa !important;
+}
+/*//////// Hamza Edit ///////*/
+
+@media only screen and (min-width: 1025px){
+    .sidebar:not(.show-scrollbar) {
+        margin-right: 2px;
+        overflow-y: scroll;
+    }
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(51, 150, 209);
+    height: 50px !important;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(250, 251, 252);
+}
+.sidebar{
+    height: calc(100vh - 62px) !important;
+}
+@media only screen and (max-width : 768px) {
+    .modal-content .panel-custom #from_items > .form-group{
+        margin-left: 0px;
+    }
+    .note-toolbar{
+        display: none !important;
+    }
+}
+.modal-dialog{
+    top:0 !important;
+}
+@media only screen and (max-width: 580px){
+    div.modal-dialog {
+        margin-top: 50px !important;
+    }
+}
+#myModal,
+#Add_clint{
+    z-index: 9999;
+}
+@media only screen and (max-width : 768px) {
+
+}
+.aside-collapsed .user-block > .user-block-picture,
+.aside-collapsed .has-user-block{
+    display: none;
+}
+@media only screen and (max-width: 767px) {
+    .sidebar-toggle {
+        position: absolute !important;
+        top: 65px !important;
+        left: 13px !important;
+        z-index: 3001;
+        background-color: #6357ad;
+        width: 41px;
+        height: 39px;
+    }
+    .nav > li > a:hover, .nav > li > a:focus {
+        text-decoration: none;
+        background-color: #6357ad;
+    }
+    .cke_top{
+        display: none !important;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .topnavbar .navbar-nav > li > a:hover, .topnavbar .navbar-nav > .open > a:hover, .topnavbar .navbar-nav > li > a:focus, .topnavbar .navbar-nav > .open > a:focus {
+        color: #fff !important;
+    }
 }

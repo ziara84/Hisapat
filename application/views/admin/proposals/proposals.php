@@ -1,5 +1,5 @@
 <!-- start modal-->
-<div id="myModal" class="modal fade" role="dialog">
+<div id="Add_clint" class="modal fade" role="dialog">
     <div class="modal-dialog">
         <!-- Modal content-->
         <div class="modal-content">
@@ -535,7 +535,7 @@
                         <?php if (!empty($created) || !empty($edited)) { ?>
                         <div class="tab-pane active " id="new">
                             <div class="row mb-lg invoice proposal-template">
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 br pv">
+                                <div class="col-sm-6 br pv">
                                     <div class="row">
                                         <div class="form-group">
                                             <label class="col-lg-3 control-label"><?= lang('reference_no') ?> <span
@@ -589,9 +589,9 @@
                                             <div class="form-group">
 
 
-                                                <label class="col-lg-3 control-label"><?= lang('client') ?>
+                                                <label class="col-lg-3 col-xs-12 control-label"><?= lang('client') ?>
                                                 </label>
-                                                <div class="col-lg-5">
+                                                <div class="col-lg-5 col-xs-8">
                                                     <select class="form-control select_box" style="width: 100%"
                                                             name="client_id" value="New Client"
                                                             onchange="get_project_by_id(this.value)">
@@ -624,10 +624,10 @@
                                                     </select>
                                                 </div>
                                                 <!-- button open modal-->
-                                                <div class="col-lg-2 col-sm-10 col-md-10 col-xs-10 addclient">
+                                                <div class="col-xs-3">
                                                
-                                                    <button type="button" data-toggle="modal" data-target="#myModal"
-                                                            class="btn btn-success">Add Clientt
+                                                    <button type="button" data-toggle="modal" data-target="#Add_clint"
+                                                            class="btn btn-success">Add Client
                                                     </button>
                                                
                                                 </div>
@@ -781,7 +781,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 br pv">
+                                <div class="col-sm-6 br pv">
                                     <div class="row">
                                         <div class="form-group">
                                             <label for="field-1"
@@ -1098,8 +1098,8 @@
 							@media only screen and (max-width: 580px) {
 							 label.formobile{display:inline-block; width:100%; text-align:left;}
 							 thead{display:none !important;}
-							 div.modal-dialog{margin-top:800px !important;}
-							 div.f_client_id button{margin-top:10px;}
+							 /*div.modal-dialog{margin-top:800px !important;*/
+                             }
 							}
 
                             </style>
@@ -1411,7 +1411,7 @@
                                                     <div class="row">
                                                         <div class="col-md-7">
                                                                 <span
-                                                                    class="bold"><?php echo lang('adjustment'); ?></span>
+                                                                    class="bold hidden"><?php echo lang('adjustment'); ?></span>
                                                         </div>
                                                         <div class="col-md-5">
                                                             <input type="text" data-parsley-type="number"
@@ -1439,8 +1439,8 @@
                                 <div id="removed-items"></div>
                                 
                                 <div class="form-group terms">
-                                <label class="col-lg-1 control-label"><?= lang('notes') ?> </label>
-                                <div class="col-lg-11">
+                                <label class="col-lg-12 "><?= lang('notes') ?> </label>
+                                <div class="col-lg-12">
                         <textarea name="notes" class="form-control textarea_"><?php
                             if (!empty($proposals_info)) {
                                 echo $proposals_info->notes;
@@ -1453,9 +1453,9 @@
                             
                             
                                 <div class="modal-footer">
-                                    <div class="col-sm-5 pull-right row">
-                                        <input type="submit" value="<?= lang('update') ?>" name="update"
-                                               class="btn btn-primary btn-block">
+                                    <div class="col-sm-2 pull-right row">
+                                        <input  type="submit" value="<?= lang('update') ?>" name="update"
+                                               class="btn btn-primary ">
                                     </div>
                                 </div>
                             </div>
