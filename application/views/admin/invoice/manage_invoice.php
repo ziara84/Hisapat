@@ -1708,7 +1708,7 @@ if (!empty($invoice_info)) {
                                                 </td>
                                                 <td class="discount_percent"></td>
                                             </tr>
-                                            <tr>
+                                            <tr style="display:none;">
                                                 <td>
                                                     <div class="row">
                                                         <div class="col-md-7">
