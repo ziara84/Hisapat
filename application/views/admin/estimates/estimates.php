@@ -1094,6 +1094,14 @@
                                     background: 0 0;
                                     padding: 3px;
                                 }
+								
+								label.formobile{display:none;}
+							@media only screen and (max-width: 580px) {
+							 label.formobile{display:inline-block; width:100%; text-align:left;}
+							 thead{display:none !important;}
+							 div.modal-dialog{margin-top:800px !important;}
+							 div.f_client_id button{margin-top:10px;}
+							}
 
                             </style>
                             <?php
@@ -1183,17 +1191,22 @@
                                 </div>
 
                                 <div class="table-responsive s_table">
-                                    <table class="table invoice-items-table items">
+                                    <table class="table invoice-items-table items"  style="width:100% !important">
                                         <thead style="background: #e8e8e8">
-                                        <tr>
-                                            <th></th>
-                                            <th><?= $language_info['item_name'] ?></th>
-                                            <th><?= $language_info['description'] ?></th>
+                                        <tr>                                 
+                                            <th>
+											<div class="row">
+                                             <div class="col-lg-2 col-sm-8">
+											 <?= $language_info['item_name'] ?> 
+                                              </div>
+                                             <div class="col-lg-2 col-sm-8">
+											   <?= $language_info['description'] ?>
+                                               </div>
                                             <?php
                                             $invoice_view = config_item('invoice_view');
                                             if (!empty($invoice_view) && $invoice_view == '2') {
                                                 ?>
-                                                <th class="col-sm-2"><?= $language_info['hsn_code'] ?></th>
+                                               <div class="col-lg-2 col-sm-8"><?= $language_info['hsn_code'] ?></div>
                                             <?php } ?>
                                             <?php
                                             $qty_heading = $language_info['qty'];
@@ -1203,11 +1216,11 @@
                                                 $qty_heading = lang('qty') . '/' . lang('hours');
                                             }
                                             ?>
-                                            <th class="qty col-sm-1"><?php echo $qty_heading; ?></th>
-                                            <th class="col-sm-2"><?= $language_info['price'] ?></th>
-                                            <th class="col-sm-2"><?= $language_info['tax_rate'] ?> </th>
-                                            <th class="col-sm-1"><?= $language_info['total'] ?></th>
-                                            <th class="col-sm-1 hidden-print"><?= $language_info['action'] ?></th>
+                                             <div class="col-lg-1 col-sm-8"><?php echo $qty_heading; ?></div>
+                                            <div class="col-lg-2 col-sm-8"><?= $language_info['price'] ?></div>
+                                             <div class="col-lg-2 col-sm-8"><?= $language_info['tax_rate'] ?> </div>
+                                             <div class="col-lg-2 col-sm-8"><?= $language_info['total'] ?></div>
+                                             <div class="col-lg-1 col-sm-8"><?= $language_info['action'] ?></div>
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -1217,36 +1230,45 @@
                                         }
                                         ?>
                                         <tr class="main">
-                                            <td></td>
+                                         
                                             <td>
+                                              <div class="row">
+                                              <div class="col-lg-2 col-sm-8">
+                                               <label class="formobile">Item Name: </label> 
                         <textarea name="item_name" class="form-control"
                                   placeholder="<?php echo lang('item_name'); ?>"></textarea>
-                                            </td>
-                                            <td>
+                                             </div>
+                                            <div class="col-lg-2 col-sm-8">
+                                             <label class="formobile">Description: </label> 
                         <textarea name="item_desc" class="form-control"
                                   placeholder="<?php echo lang('description'); ?>"></textarea>
-                                            </td>
+                                           </div>
                                             <?php
                                             $invoice_view = config_item('invoice_view');
                                             if (!empty($invoice_view) && $invoice_view == '2') {
                                                 ?>
-                                                <td><input type="text" name="hsn_code"
-                                                           class="form-control"></td>
+                                                <div class="col-lg-2 col-sm-8"><input type="text" name="hsn_code"
+                                                           class="form-control"> </div>
                                             <?php } ?>
-                                            <td>
+                                           <div class="col-lg-1 col-sm-8">
+                                              <label class="formobile">Qty/ Hours:</label>
                                                 <input type="text" data-parsley-type="number" name="quantity" min="0" value="1"
                                                        class="form-control"
                                                        placeholder="<?php echo lang('qty'); ?>">
-                                                <input type="text"
+                                                <input type="hidden"
                                                        placeholder="<?php echo lang('unit') . ' ' . lang('type'); ?>"
                                                        name="unit"
                                                        class="form-control input-transparent">
-                                            </td>
-                                            <td>
+                                          </div>
+                                           <div class="col-lg-2 col-sm-8">
+                                             <label class="formobile">Price:</label>
                                                 <input type="text" data-parsley-type="number" name="unit_cost" class="form-control"
                                                        placeholder="<?php echo lang('price'); ?>">
-                                            </td>
-                                            <td>
+                                            </div>
+                                              
+                                             <div class="col-lg-2 col-sm-8">
+                                             <label class="formobile">Tax Rate:</label>
+                                             <div style="width: 100% !important;">
                                                 <?php
                                                 $taxes = $this->db->order_by('tax_rate_percent', 'ASC')->get('tbl_tax_rates')->result();
                                                 $default_tax = config_item('default_tax');
@@ -1266,19 +1288,27 @@
                                                 $select .= '</select>';
                                                 echo $select;
                                                 ?>
-                                            </td>
-                                            <td></td>
-                                            <td>
+                                           </div>
+                                            </div>
+                                           <div class="col-lg-2 col-sm-8">
+                                            <label class="formobile">Total:</label>
+                                           &nbsp;</div>
+                                            
+                                           <div class="col-lg-1 col-sm-8">
+                                           <label class="formobile">Action:</label>
                                                 <?php
                                                 $new_item = 'undefined';
                                                 if (isset($estimates_info)) {
                                                     $new_item = true;
                                                 }
                                                 ?>
+                                               <div style="width: 100% !important;">
                                                 <button type="button"
-                                                        onclick="add_item_to_table('undefined','undefined',<?php echo $new_item; ?>); return false;"
+                                                        onclick="add_item_to_table2('undefined','undefined',<?php echo $new_item; ?>); return false;"
                                                         class="btn-xs btn btn-info"><i class="fa fa-check"></i>
                                                 </button>
+                                                </div>
+                                            </div>
                                             </td>
                                         </tr>
                                         <?php if (isset($estimates_info) || isset($add_items)) {

@@ -731,11 +731,12 @@ if (!empty($invoice_info)) {
                                                  id="start_recurring"><?= lang('recurring') ?></div>
 
                                         </div>
+                                        </div>
                                         <div id="recurring" class="hide">
                                             <div class="form-group">
                                                 <label
                                                         class="col-lg-3 control-label"><?= lang('recur_frequency') ?> </label>
-                                                <div class="col-lg-4">
+                                                <div class="col-lg-7">
                                                     <select name="recuring_frequency" id="recuring_frequency"
                                                             class="form-control">
                                                         <option value="none"><?= lang('none') ?></option>
@@ -756,6 +757,7 @@ if (!empty($invoice_info)) {
                                                     </select>
                                                 </div>
                                             </div>
+                                          
                                             <div class="form-group">
                                                 <label
                                                         class="col-lg-3 control-label"><?= lang('start_date') ?></label>
@@ -1397,6 +1399,8 @@ if (!empty($invoice_info)) {
 							 label.formobile{display:inline-block; width:100%; text-align:left;}
 							 thead{display:none !important;}
 							 div..modal-dialog{margin-top:800px !important;}
+							 div#start_recurring{margin-top:10px;}
+							 div.f_client_id button{margin-top:10px;}
 							}
 
                             </style>

@@ -535,7 +535,7 @@
                         <?php if (!empty($created) || !empty($edited)) { ?>
                         <div class="tab-pane active " id="new">
                             <div class="row mb-lg invoice proposal-template">
-                                <div class="col-xs-6 br pv">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 br pv">
                                     <div class="row">
                                         <div class="form-group">
                                             <label class="col-lg-3 control-label"><?= lang('reference_no') ?> <span
@@ -624,10 +624,10 @@
                                                     </select>
                                                 </div>
                                                 <!-- button open modal-->
-                                                <div class="col-lg-2">
+                                                <div class="col-lg-2 col-sm-10 col-md-10 col-xs-10 addclient">
                                                
                                                     <button type="button" data-toggle="modal" data-target="#myModal"
-                                                            class="btn btn-success">Add Client
+                                                            class="btn btn-success">Add Clientt
                                                     </button>
                                                
                                                 </div>
@@ -781,7 +781,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xs-6 br pv">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 br pv">
                                     <div class="row">
                                         <div class="form-group">
                                             <label for="field-1"
@@ -1099,6 +1099,7 @@
 							 label.formobile{display:inline-block; width:100%; text-align:left;}
 							 thead{display:none !important;}
 							 div.modal-dialog{margin-top:800px !important;}
+							 div.f_client_id button{margin-top:10px;}
 							}
 
                             </style>
