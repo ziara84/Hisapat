@@ -228,12 +228,12 @@ $type = $this->session->userdata('c_message');
         </li>
     </ul>
     <?php } ?>
-    <div class="wrapper" style="margin: 20% 0 0 auto">
-        <div class="block-center mt-xl wd-xl">
-            <div class="text-center" style="margin-bottom: 20px">
-                <img style="width: 100%;"
-                     src="<?= base_url() . config_item('company_logo') ?>" class="m-r-sm">
-            </div>
+    <ul class="navbar-left list-unstyled">
+        <li><img style="width: 30%;" src="<?= base_url() . config_item('company_logo') ?>" class="m-r-sm"></li>
+    </ul>
+    <div class="wrapper" style="margin:0 0 0 auto">
+        <div class="block-center  wd-xl">
+
             <?= message_box('success'); ?>
             <?= message_box('error'); ?>
             <div class="error_login">
@@ -285,7 +285,7 @@ $type = $this->session->userdata('c_message');
                 <span>&copy;</span>
                 <span><a href="<?= config_item('copyright_url') ?>"> <?= config_item('copyright_name') ?></a></span>
                 <br/>
-                <span>2015-2016</span>
+                <span>2018</span>
                 <span>-</span>
                 <span><?= lang('version') . ' ' . config_item('version') ?></span>
             </div>

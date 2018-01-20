@@ -1,6 +1,15 @@
 @charset "UTF-8";
 @import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,400italic);
-
+@font-face {
+    font-family: "JF Flat Regular";
+    src: url('../font/JF-Flat-regular.eot');
+    src: url('../font/JF-Flat-regular.eot?#iefix') format('embedded-opentype'),
+    url('../font/JF-Flat-regular.svg#JF Flat Regular') format('svg'),
+    url('../font/JF-Flat-regular.woff') format('woff'),
+    url('../font/JF-Flat-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 /*!
  *
  * Bootstrap Admin App + jQuery
@@ -469,7 +478,7 @@ fieldset .form-group {
     }	
 	
 	 @font-face {
-        font-family: "Gotham Light";
+        font-family: "JF Flat Regular" , Open Sans;;
         src: url("assets/fonts/Gotham-Light.ttf");
 
         -------------
@@ -487,8 +496,7 @@ fieldset .form-group {
    Component: typo.less
  ========================================================================== */
 body {
-    font-family: "Gotham Light";
-	font-family:
+    font-family: "JF Flat Regular" , Open Sans;
     color: #656565;
 }
 
@@ -496,7 +504,7 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: "Gotham Light";
+    font-family: "JF Flat Regular" , Open Sans;;
     /*font-weight: bold;*/
 }
 
